@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
 
@@ -14,7 +15,6 @@ const Shop = () => {
     }, [])
 
     const handle_add_to_cart = (product) => {
-        console.log(product);
         const new_cart = [...cart, product];
         set_cart(new_cart);
     }
@@ -27,8 +27,7 @@ const Shop = () => {
                 }
             </div>
             <div className="cart_container">
-                <h3>this is shop shection</h3>
-                <p>Item selected: {cart.length}</p>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
