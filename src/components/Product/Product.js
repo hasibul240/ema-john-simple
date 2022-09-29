@@ -6,7 +6,7 @@ import './product.css';
 const Product = (props) => {
 
     const { handle_add_to_cart,product} = props;
-    const { name, img, seller, price, ratings} = product;
+    const { name, img, seller, price, ratings, id} = product;
     
 
     return (
